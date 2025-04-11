@@ -15,7 +15,7 @@ pub fn tokenize(input: &str) -> Vec<String> {
         if c == '.' {
             tokens.push(tokenize_special(&mut chars));
         } else {
-            tokens.push(tokenize_normal(&mut chars));
+            tokens.push(tokenize_normal(&mut chars).to_lowercase());
         }
     }
     tokens
